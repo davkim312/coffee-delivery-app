@@ -1,0 +1,62 @@
+.container {
+    height: 400px;
+    background-color: #b2beb5;
+    display: flex;
+}
+
+.item {
+    flex: 1;
+    position: relative;
+    display: flex;
+}
+
+.item:last-child {
+    flex: 2;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.card {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.title {
+    color: white;
+    font-weight: 750;
+}
+
+.text {
+    color: black;
+    font-size: 17px;
+    font-weight: 600; 
+}
+
+.statement {
+    color: #F0E68C;
+    font-style: italic;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        text-align: center;
+        height: auto;
+    }
+
+    .item {
+        flex-direction: column;
+    }
+
+    .item:first-child {
+        display: none;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+}

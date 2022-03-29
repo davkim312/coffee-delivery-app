@@ -1,0 +1,95 @@
+.container {
+    background-color: #b2beb5;
+    height: 200px;
+    padding: 0px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.callButton {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(2) { /* child number goes from left to right starting at 1 (left-side) */ 
+    flex: 3;
+}
+
+.item:nth-child(3) {
+    justify-content: flex-end;
+}
+
+.texts {
+    margin-left: 25px;
+    color: white;
+}
+
+.text:first-child{ /* this is for the first styles.text */
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.text:last-child{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.list {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: white;
+}
+
+.listItem {
+    margin: 20px;
+    font-weight: 550;
+    font-size: 20px;
+}
+
+.cart { 
+    position: relative;
+}
+
+.counter {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 70%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* below is for mobile devices */
+
+@media screen and (max-width:480px) {
+
+    .item:nth-child(2) {
+        flex: none;
+    }
+
+    .item:nth-child(1) {
+        flex: 3;
+    }
+}

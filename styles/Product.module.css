@@ -1,0 +1,146 @@
+.container {
+    height: calc(100vh - 100px);
+    display: flex;
+}
+
+.left {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    flex: 1;
+    padding: 10px;
+}
+
+.imageContainer {
+    position: relative;
+    height: 80%;
+    width: 80%;
+}
+
+.price {
+    color: black;
+    border-bottom: 1px solid black;
+    font-size: 25px;
+    font-weight: 500;  
+}
+
+.description {
+    font-size: 18px;
+}
+
+.sizes {
+    display: flex;
+    justify-content: space-between;
+    width: 40%
+}
+
+.size {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.size:nth-child(2) {
+    height: 60px;
+    width: 60px;
+}
+
+.size:last-child {
+    height: 70px;
+    width: 70px;
+}
+
+.number {
+    color: black;
+    position: absolute;
+    background-color:  rgba(76, 175, 80, 0.3);
+    top: -5px;
+    right: -15px;
+    font-size: 18px;
+    padding: 0 7px;
+    border-radius: 12px;
+}
+
+.milk {
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.option {
+    font-size: 17px;
+    font-weight: 600;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    height: 18px;
+    width: 18px;
+}
+
+.quantity {
+    height: 35px;
+    width: 60px;
+}
+
+.button {
+    height: 35px;
+    color: black;
+    background-color: #90ee90;
+    border: double;
+    font-weight: 600;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* media devices */
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin-top: 23px;
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .imageContainer {
+        height: 70vw;
+        width: 70vw;
+    }
+
+    .title {    
+        margin: 7px;
+    }
+
+    .sizes {
+        padding: 0px 20px;
+        width: 100%
+    }
+
+    .milk {
+        flex-direction: column;
+    }
+
+    .option {
+        font-size: 16px;
+        margin: 10px;
+ 
+    }
+
+    .checkbox {
+        height: 23px;
+        width: 23px;
+    }
+
+    .quantity, .button {
+        height: 65px;
+        padding: 8px 16px;
+    }
+}
