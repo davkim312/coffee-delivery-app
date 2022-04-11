@@ -59,10 +59,12 @@
     margin: 20px;
     font-weight: 550;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .cart { 
     position: relative;
+    cursor: pointer;
 }
 
 .counter {

@@ -1,14 +1,17 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/CoffeeCard.module.css';
 
-const CoffeeCard = () => {
+const CoffeeCard = ({ coffee }) => {
   return (
     <div className={styles.container}>
-        <Image src='/img/dalgonacoffeeimg.jpg' alt='' width='500' height='500' />
-        <h1 className={styles.title}>DALGONA COFFEE</h1>
-            <span className={styles.price}>$6.50</span>
+        <Link href={`/product/${coffee._id}`} passHref>
+          <Image src={coffee.image} alt='coffee image' width='500' height='500' />
+        </Link>
+        <h1 className={styles.title}>{coffee.title}</h1>
+            <span className={styles.price}>$ {coffee.prices[0]}</span>
             <p className={styles.description}>
-                Milk of your choice topped with hand-whipped cream made out of grounded coffee beans and brown sugar.
+                {coffee.description}
             </p>
     </div>
   )
